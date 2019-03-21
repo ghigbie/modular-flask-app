@@ -1,18 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    {% if title %}
-    <title>{{ title }}</title>
-    {% else %}
-    <ttile>Modular Flask</ttile>
-    {% endif %}
-</head>
-<body>
+{% extends "base.html" %}
 
-
+{% block content %}
     Home Page for {{ user.username }}
-</body>
-</html>
+
+    {% for post in posts %}
+        <div>
+            <p>{{ post.author.username }} says:
+                <b>
+                    {{ post.body }}
+                </b>
+            </p>
+        </div>
+    {% endfor %}
+
+{% endblock %}
