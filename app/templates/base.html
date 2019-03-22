@@ -7,7 +7,11 @@
     <link rel="stylesheet" 
           href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    {% if title %}
     <title>{{ title }}</title>
+    {% else %}
+    <title>Modular Flask</title>
+    {% endif %}
 </head>
 <body>
     <nav class="navbar navbar-dark bg-dark">
@@ -24,7 +28,6 @@
             </ul>
          </div>
     </nav>
-    <h1>{{ app_name_foundation | capitalize }}</h1>
     <div class="jumbotron">
         {% block content %}
 
