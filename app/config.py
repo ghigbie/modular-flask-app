@@ -1,6 +1,8 @@
 import os
 
-class config(object):
-    SECRET_KEY = os.enivron.get('SECRET_KEY') or 'you-will-never-guess-this' 
 
+class Config(object):
+    SECRET_KEY = os.environ.get('SECRET_KEY') or 'you-will-never-guess'
+
+    
 # This uses an environment variable or then uses the string

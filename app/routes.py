@@ -23,6 +23,6 @@ def index():
     ]
     return render_template('home.html', title=title, user=user, posts=posts)
 
-# @app.route('/about')
-# def index():
-#     return render_template('about.html', title=title)
+@app.route('/about')
+def about():
+    return render_template('about.html', title=title)
